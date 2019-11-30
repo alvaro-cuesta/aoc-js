@@ -1,7 +1,7 @@
 {
   "name": "aoc",
   "version": "2019.11.30.0",
-  "description": "My Advent of Code solutions",
+  "description": "My Advent of Code solutions in JS",
   "scripts": {
     "all": "./bin/all.js",
     "year": "./bin/year.js",
