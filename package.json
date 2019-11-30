@@ -7,6 +7,7 @@
     "year": "./bin/year.js",
     "day": "./bin/day.js",
     "part": "./bin/part.js",
+    "download-test-input": "./bin/download-test-input.js",
     "test": "jest"
   },
   "repository": {
