@@ -1,0 +1,3 @@
+- Cache downloaded inputs (by session hash?)
+- Automatic download of test inputs
+- Automatic testing by year
