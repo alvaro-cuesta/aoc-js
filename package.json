@@ -1,7 +1,7 @@
 {
-  "name": "aoc2019",
-  "version": "1.0.0",
-  "description": "Advent of Code 2019 solutions",
+  "name": "aoc",
+  "version": "2019.11.30.0",
+  "description": "My Advent of Code solutions",
   "scripts": {
     "all": "./bin/all.js",
     "year": "./bin/year.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alvaro-cuesta/aoc2019.git"
+    "url": "git+https://github.com/alvaro-cuesta/aoc-js.git"
   },
   "keywords": [
     "advent",
@@ -22,9 +22,9 @@
   "author": "Alvaro Cuesta <alvaro-cuesta@GitHub>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alvaro-cuesta/aoc2019/issues"
+    "url": "https://github.com/alvaro-cuesta/aoc-js/issues"
   },
-  "homepage": "https://github.com/alvaro-cuesta/aoc2019#readme",
+  "homepage": "https://github.com/alvaro-cuesta/aoc-js#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "jest": "^24.9.0"
