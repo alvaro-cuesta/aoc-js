@@ -3,11 +3,11 @@
   "version": "2019.11.30.0",
   "description": "My Advent of Code solutions in JS",
   "scripts": {
-    "all": "./bin/all.js",
-    "year": "./bin/year.js",
-    "day": "./bin/day.js",
-    "part": "./bin/part.js",
-    "download-test-input": "./bin/download-test-input.js",
+    "all": "node ./bin/all.js",
+    "year": "node ./bin/year.js",
+    "day": "node ./bin/day.js",
+    "part": "node ./bin/part.js",
+    "download-test-input": "node ./bin/download-test-input.js",
     "test": "jest",
     "watch": "jest --watch"
   },
