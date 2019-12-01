@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-require("dotenv").config();
+require('dotenv').config()
 
-const { allIO } = require("../lib/advent/solution-io");
+const { allIO } = require('../lib/advent/solution-io')
 
-const session = process.env.SESSION;
+const session = process.env.SESSION
 
 Promise.all(allIO(session)).then(() => {
-  console.log("Finished!");
-});
+  console.log('Finished!')
+})
