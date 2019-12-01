@@ -10,11 +10,11 @@ to AoC and take the cookie value from your browser's network inspector).
 
 ### Development
 
-- `yarn watch`
-- `yarn test`
+- `yarn watch` / `yarn watch <year>` / `yarn watch <year>/<day>`
+- `yarn test` / `yarn test <year>` / `yarn test <year>/<day>`
 - `yarn download-test-input`: recreates all `DD.test.input` files. Old input
-  files will be overwritten. This means existing tests will fail since the
-  test output matches the ones from my AoC user.
+  files will be overwritten. This means existing tests will fail since the test
+  output matches the ones from my AoC user.
 
 ### Solutions
 
