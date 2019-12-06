@@ -1,4 +1,4 @@
-# AoC
+# 🎄 AoC JS
 
 My [Advent of Code](https://adventofcode.com) solutions in JavaScript.
 
