@@ -6,8 +6,14 @@
     "node": true,
     "es2017": true
   },
-  "extends": "eslint:recommended",
+  "plugins": ["jest"],
+  "extends": ["eslint:recommended", "plugin:jest/all"],
   "rules": {
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "jest/lowercase-name": "off",
+    "jest/require-top-level-describe": "off",
+    "jest/prefer-strict-equal": "off",
+    "jest/no-identical-title": "off",
+    "jest/consistent-test-it": "off"
   }
 }
