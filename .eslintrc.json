@@ -9,7 +9,7 @@
   "plugins": ["jest"],
   "extends": ["eslint:recommended", "plugin:jest/all"],
   "rules": {
-    "no-unused-vars": "warn",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "jest/lowercase-name": "off",
     "jest/require-top-level-describe": "off",
     "jest/prefer-strict-equal": "off",
