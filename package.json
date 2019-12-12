@@ -7,6 +7,7 @@
     "year": "node ./bin/year.js",
     "day": "node ./bin/day.js",
     "part": "node ./bin/part.js",
+    "start-day": "node ./bin/start-day.js",
     "download-test-input": "node ./bin/download-test-input.js",
     "test": "jest",
     "watch": "jest --watch"

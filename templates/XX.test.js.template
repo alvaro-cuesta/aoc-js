@@ -1,0 +1,15 @@
+const { describeDay } = require('../test-utils')
+
+describeDay(
+  <<YEAR>>,
+  <<DAY>>,
+
+  null,
+  null,
+
+  ({}) => {},
+
+  (part1, {}) => {},
+
+  (part2, {}) => {},
+)

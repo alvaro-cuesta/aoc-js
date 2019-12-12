@@ -4,9 +4,9 @@ require('dotenv').config()
 
 const { partIO } = require('../lib/advent/solution-io')
 
-const year = process.argv[2]
-const day = process.argv[3]
-const part = process.argv[4]
+const year = parseInt(process.argv[2], 10)
+const day = parseInt(process.argv[3], 10)
+const part = parseInt(process.argv[4], 10)
 const session = process.env.SESSION
 
 partIO(year, day, part, session).then(() => {
