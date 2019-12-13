@@ -7,9 +7,9 @@ describeDay(
   null,
   null,
 
-  ({}) => {},
+  (dayModule) => {},
 
-  (part1, {}) => {},
+  (part1, dayModule) => {},
 
-  (part2, {}) => {},
+  (part2, dayModule) => {},
 )

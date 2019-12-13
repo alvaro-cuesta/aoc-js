@@ -23,11 +23,49 @@ const dayString = getDayString(day)
 const dayFile = path.join(yearDir, `${dayString}.js`)
 const testFile = path.join(yearDir, `${dayString}.test.js`)
 
-Promise.all([
-  fsp.copyFile(dayTemplateFile, dayFile, fs.constants.COPYFILE_EXCL),
-  fsp.copyFile(testTemplateFile, testFile, fs.constants.COPYFILE_EXCL),
-  dayIO(year, day, session),
-])
+const fileExists = (path) =>
+  fsp
+    .stat(path)
+    .then(() => true)
+    .catch((err) => {
+      if (err.code !== 'ENOENT') {
+        throw err
+      }
+
+      return false
+    })
+
+const fillTemplate = (string) =>
+  string.replace(/<<YEAR>>/g, year).replace(/<<DAY>>/g, day)
+
+const createFromTemplate = (templateFile, destinationFile) =>
+  fsp
+    .readFile(templateFile, { encoding: 'utf8', flag: 'r' })
+    .then(fillTemplate)
+    .then((data) =>
+      fsp.writeFile(destinationFile, data, {
+        encoding: 'utf8',
+        mode: 0o644,
+        flag: 'w',
+      }),
+    )
+
+Promise.all([fileExists(dayFile), fileExists(testFile)])
+  .then(([dayFileExists, testFileExists]) => {
+    if (dayFileExists) {
+      throw new Error(`Day file ${dayFile} already exists`)
+    }
+
+    if (testFileExists) {
+      throw new Error(`Test file ${testFile} already exists`)
+    }
+
+    return Promise.all([
+      createFromTemplate(dayTemplateFile, dayFile),
+      createFromTemplate(testTemplateFile, testFile),
+      dayIO(year, day, session),
+    ])
+  })
   .then(() => {
     console.log('Finished!')
   })
