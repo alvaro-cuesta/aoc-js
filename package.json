@@ -9,6 +9,7 @@
     "part": "node ./bin/part.js",
     "start-day": "node ./bin/start-day.js",
     "download-test-input": "node ./bin/download-test-input.js",
+    "disassemble-intcode": "node ./bin/disassemble-intcode.js",
     "test": "jest",
     "watch": "jest --watch"
   },
