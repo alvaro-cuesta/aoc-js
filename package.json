@@ -31,6 +31,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "eslint": "^6.7.2",
+    "iter-tools": "^7.0.0-rc.0",
     "jest": "^24.9.0",
     "ramda": "^0.26.1"
   },
