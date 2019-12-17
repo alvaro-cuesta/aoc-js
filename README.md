@@ -12,6 +12,8 @@ to AoC and take the cookie value from your browser's network inspector).
 
 - `yarn watch` / `yarn watch <year>` / `yarn watch <year>/<day>`
 - `yarn test` / `yarn test <year>` / `yarn test <year>/<day>`
+- `yarn start-day <year> <day>`: creates day from template and downloads its
+  input.
 - `yarn download-test-input`: recreates all `DD.test.input` files. Old input
   files will be overwritten. This means existing tests will fail since the test
   output matches the ones from my AoC user.
