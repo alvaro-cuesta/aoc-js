@@ -34,7 +34,8 @@
     "eslint": "^6.7.2",
     "iter-tools": "^7.0.0-rc.0",
     "jest": "^24.9.0",
-    "ramda": "^0.26.1"
+    "ramda": "^0.26.1",
+    "yargs": "^15.0.2"
   },
   "devDependencies": {
     "eslint-plugin-jest": "^23.1.1"
