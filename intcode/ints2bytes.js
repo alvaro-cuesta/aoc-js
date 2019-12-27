@@ -1,48 +1,67 @@
-const BYTE_COMMA = 44
-const BYTE_0 = 48
-const BYTE_9 = 57
+#!/usr/bin/env node
 
-const args = require('yargs')
-  .option('raw', {
-    alias: 'r',
-    type: 'boolean',
-    description: 'Set stdin as a raw TTY (requires stdin to be a terminal)',
-  })
-  .check(({ raw }) => {
-    if (raw && !process.stdin.isTTY) {
-      throw new Error('Raw TTY can only be used if stdin is a terminal')
-    }
+const { intsFromStream } = require('./util')
 
-    return true
-  }).argv
+const args = require('yargs').usage(
+  '$0',
+  'Transforms comma-separated ints into bytes.',
+  (yargs) => {
+    yargs
+      .option('raw', {
+        alias: 'r',
+        type: 'boolean',
+        description:
+          'Set stdin as a raw TTY (requires stdin to be a terminal).',
+      })
+      .check(({ raw }) => {
+        if (raw && !process.stdin.isTTY) {
+          throw new Error('Raw TTY can only be used if stdin is a terminal.')
+        }
+
+        return true
+      })
+      .option('normalize-newline', {
+        alias: 'n',
+        type: 'boolean',
+        description: 'Normalize LF (10) to CRLF (13, 10).',
+        default: process.platform === 'win32',
+      })
+      .check(({ normalizeNewline }) => {
+        if (normalizeNewline) {
+          throw new Error('Newline normalization not yet implemented.')
+        }
+
+        return true
+      })
+  },
+).argv
 
 if (args.raw) {
   process.stdin.setRawMode(true)
 }
 
-const main = async () => {
-  let byte = Buffer.alloc(1, 0)
+async function main() {
+  try {
+    const byte = Buffer.alloc(1)
 
-  for await (const chunk of process.stdin) {
-    for (const digitByte of chunk) {
-      if (digitByte === BYTE_COMMA) {
-        process.stdout.write(byte)
-        byte[0] = 0
-      } else if (digitByte >= BYTE_0 && digitByte <= BYTE_9) {
-        const newNumber = byte[0] * 10 + digitByte - BYTE_0
-
-        if (newNumber > 255) {
-          process.stderr.write(`Input value >255 (${newNumber}...)`)
-          process.exit(1)
-        }
-
-        byte[0] = newNumber
-      } else {
-        process.stderr.write(`Got non-digit byte (${digitByte})`)
-        process.exit(2)
+    for await (const int of intsFromStream(process.stdin)) {
+      if (int > 255) {
+        process.stderr.write(`Input value >255 (${int}).
+`)
+        process.exit(1)
       }
+
+      byte[0] = int
+
+      process.stdout.write(byte)
     }
+  } catch (err) {
+    process.stderr.write(`${err}
+`)
+    process.exit(1)
   }
+
+  process.exit(0)
 }
 
 main()
