@@ -11,7 +11,8 @@
     "download-test-input": "node ./bin/download-test-input.js",
     "disassemble-intcode": "node ./bin/disassemble-intcode.js",
     "test": "jest",
-    "watch": "jest --watch"
+    "watch": "jest --watch",
+    "lint": "eslint bin/**/*.js intcode/**/*.js lib/**/*.js"
   },
   "repository": {
     "type": "git",
