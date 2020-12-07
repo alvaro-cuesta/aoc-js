@@ -25,6 +25,16 @@ to AoC and take the cookie value from your browser's network inspector).
 - `yarn day <year> <day>`
 - `yarn part <year> <day> <part>`
 
+### Progress
+
+- [2015](./lib/2015/) (2/50)
+- [2016](./lib/2016/) (16/50) — 43/50 submitted, but apparently I lost the code?
+- [2017](./lib/2017/) (0/50) —
+  [50/50 in Rust](https://github.com/alvaro-cuesta/advent-solutions)
+- [2018](./lib/2018/) (10/50)
+- [2019](./lib/2019/) (50/50)
+- [2020](./lib/2020/) (14/50)
+
 ## [License](./LICENSE)
 
 Copyright 2019 Álvaro Cuesta (https://www.github.com/alvaro-cuesta/)
