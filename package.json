@@ -1,6 +1,6 @@
 {
   "name": "aoc",
-  "version": "2020.12.08.0",
+  "version": "2020.12.08.1",
   "description": "My Advent of Code solutions in JS",
   "scripts": {
     "all": "node ./bin/all.js",
