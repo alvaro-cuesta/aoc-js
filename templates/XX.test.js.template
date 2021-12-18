@@ -1,5 +1,8 @@
 const { describeDay } = require('../test-utils')
 
+const EXAMPLE_INPUT = `FILL ME
+`
+
 describeDay(
   <<YEAR>>,
   <<DAY>>,
@@ -9,7 +12,19 @@ describeDay(
 
   (dayModule) => {},
 
-  (part1, dayModule) => {},
+  (part1, dayModule) => {
+    it('Example input', () => {
+      expect.assertions(1)
 
-  (part2, dayModule) => {},
+      expect(part1(EXAMPLE_INPUT)).toEqual(null)
+    })
+  },
+
+  (part2, dayModule) => {
+    it('Example input', () => {
+      expect.assertions(1)
+
+      expect(part2(EXAMPLE_INPUT)).toEqual(null)
+    })
+  },
 )
