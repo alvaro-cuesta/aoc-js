@@ -33,6 +33,8 @@ to AoC and take the cookie value from your browser's network inspector).
   [50/50 in Rust](https://github.com/alvaro-cuesta/advent-solutions)
 - [2018](./lib/2018/) (10/50)
 - [2019](./lib/2019/) (50/50)
+  - Day 20 has two skipped (due to unexpected result) tests, but the solution
+    seems to be correct.
 - [2020](./lib/2020/) (36/50)
 - [2021](./lib/2021/) (36/50)
 - [2022](./lib/2022/) (12/50)
