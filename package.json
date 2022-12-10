@@ -33,7 +33,7 @@
     "big-integer": "^1.6.51",
     "dotenv": "^16.0.3",
     "eslint": "^8.29.0",
-    "iter-tools": "^7.0.0-rc.0",
+    "iter-tools": "=7.0.0-rc.0",
     "jest": "^29.3.1",
     "ramda": "^0.28.0",
     "yargs": "^17.6.2"
