@@ -71,8 +71,9 @@ const main = async () => {
 
       if (y + 2 > h) {
         process.stderr.write(
-          `Console is not tall enough. Currently ${h} rows but got ${y +
-            2} tile.
+          `Console is not tall enough. Currently ${h} rows but got ${
+            y + 2
+          } tile.
 `,
         )
         process.exit(1)
@@ -86,7 +87,7 @@ const main = async () => {
         process.exit(1)
       }
 
-      const tile = args.tilemap[tileCode]
+      const tile = args.TILEMAP[tileCode]
 
       if (tile === undefined) {
         process.stderr.write(`Unknown tile ${tileCode}.

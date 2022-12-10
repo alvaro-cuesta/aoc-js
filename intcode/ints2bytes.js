@@ -20,6 +20,7 @@ const args = require('yargs').usage(
 
         return true
       })
+    /* TODO:
       .option('normalize-newline', {
         alias: 'n',
         type: 'boolean',
@@ -33,6 +34,7 @@ const args = require('yargs').usage(
 
         return true
       })
+      */
   },
 ).argv
 

@@ -43,7 +43,7 @@ const args = require('yargs').usage(
         description: 'Exits when receiving a key not specified in the keymap.',
       })
       .check((args) => {
-        if (args.kps && args.kps > 0 && args.keymap.null === undefined) {
+        if (args.kps && args.kps > 0 && args.KEYMAP.null === undefined) {
           throw new Error(
             'No "null" key specified in keymap. Required when running on KPS mode.',
           )
@@ -63,11 +63,11 @@ process.stdin.setEncoding('hex')
 let lastCode = null
 
 if (args.kps && args.kps > 0) {
-  lastCode = args.keymap.null
+  lastCode = args.KEYMAP.null
 
   setInterval(() => {
     process.stdout.write(`${lastCode},`)
-    lastCode = args.keymap.null
+    lastCode = args.KEYMAP.null
   }, 1000 / args.kps)
 }
 
@@ -80,7 +80,7 @@ const main = async () => {
         }
       }
 
-      const code = args.keymap[keyCode]
+      const code = args.KEYMAP[keyCode]
 
       if (code === undefined) {
         if (args.exitOnUnknown) {

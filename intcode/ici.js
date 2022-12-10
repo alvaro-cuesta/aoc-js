@@ -48,7 +48,7 @@ const outputIt = R.pipe(
   intcode.parseRAM,
   intcode.spawn,
   intcode.asyncIteratorExecutor(intsFromStream(process.stdin)),
-)(args.rom)
+)(args.ROM)
 
 async function main() {
   try {
