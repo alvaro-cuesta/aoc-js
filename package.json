@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/alvaro-cuesta/aoc-js#readme",
   "dependencies": {
-    "big-integer": "^1.6.48",
+    "big-integer": "^1.6.51",
     "dotenv": "^16.0.3",
     "eslint": "^7.15.0",
     "iter-tools": "^7.0.0-rc.0",
