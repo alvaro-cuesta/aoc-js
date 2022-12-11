@@ -13,18 +13,18 @@ describeDay(
   (dayModule) => {},
 
   (part1, dayModule) => {
-    it('Example input', () => {
+    test('Example input', () => {
       expect.assertions(1)
 
-      expect(part1(EXAMPLE_INPUT)).toEqual(null)
+      expect(part1(EXAMPLE_INPUT)).toBeNull()
     })
   },
 
   (part2, dayModule) => {
-    it('Example input', () => {
+    test('Example input', () => {
       expect.assertions(1)
 
-      expect(part2(EXAMPLE_INPUT)).toEqual(null)
+      expect(part2(EXAMPLE_INPUT)).toBeNull()
     })
   },
 )

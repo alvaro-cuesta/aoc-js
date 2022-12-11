@@ -12,6 +12,15 @@
     "jest/require-top-level-describe": "off",
     "jest/prefer-strict-equal": "off",
     "jest/no-identical-title": "off",
-    "jest/consistent-test-it": "off"
+    "jest/consistent-test-it": "off",
+    "jest/require-hook": [
+      "error",
+      {
+        "allowedFunctionCalls": ["describeDay"]
+      }
+    ],
+    "jest/prefer-lowercase-title": "off",
+    "jest/max-expects": "off",
+    "jest/max-nested-describe": "off"
   }
 }
