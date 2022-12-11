@@ -3,24 +3,32 @@
     "node": true,
     "es2020": true
   },
-  "plugins": ["jest"],
-  "extends": ["eslint:recommended", "plugin:jest/all"],
+  "extends": ["eslint:recommended"],
   "rules": {
     "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-    "no-extra-semi": "off",
-    "jest/lowercase-name": "off",
-    "jest/require-top-level-describe": "off",
-    "jest/prefer-strict-equal": "off",
-    "jest/no-identical-title": "off",
-    "jest/consistent-test-it": "off",
-    "jest/require-hook": [
-      "error",
-      {
-        "allowedFunctionCalls": ["describeDay"]
+    "no-extra-semi": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*test*"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/all"],
+      "rules": {
+        "jest/lowercase-name": "off",
+        "jest/require-top-level-describe": "off",
+        "jest/prefer-strict-equal": "off",
+        "jest/no-identical-title": "off",
+        "jest/consistent-test-it": "off",
+        "jest/require-hook": [
+          "error",
+          {
+            "allowedFunctionCalls": ["describeDay"]
+          }
+        ],
+        "jest/prefer-lowercase-title": "off",
+        "jest/max-expects": "off",
+        "jest/max-nested-describe": "off"
       }
-    ],
-    "jest/prefer-lowercase-title": "off",
-    "jest/max-expects": "off",
-    "jest/max-nested-describe": "off"
-  }
+    }
+  ]
 }
