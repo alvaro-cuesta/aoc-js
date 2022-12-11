@@ -37,7 +37,7 @@ to AoC and take the cookie value from your browser's network inspector).
     seems to be correct.
 - [2020](./lib/2020/) (36/50)
 - [2021](./lib/2021/) (36/50)
-- [2022](./lib/2022/) (20/50)
+- [2022](./lib/2022/) (22/50)
 
 ## [License](./LICENSE)
 
