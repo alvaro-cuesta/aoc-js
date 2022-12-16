@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/alvaro-cuesta/aoc-js#readme",
   "dependencies": {
+    "@datastructures-js/queue": "^4.2.3",
     "big-integer": "^1.6.51",
     "dotenv": "^16.0.3",
     "eslint": "^8.29.0",
